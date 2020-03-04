@@ -1,31 +1,27 @@
 <template>
-  <div id="view-home">
-    <Navigation title="首页" height="50px" back="true" color="#07c160" >
-      <div slot="nav-right">右边插槽</div>
+  <div class="view-home">
+    <Navigation title="微信" height="49px">
+      <div slot="nav-right">◉</div>
     </Navigation>
-    <Button background="#ddd" mini @click="butClick()">按钮</Button>
-
+    <MessageBox></MessageBox>
   </div>
 </template>
 
 <script>
-import Button from "@/components/common/button/Button";
+import MessageBox from "@/components/content/MessageBox";
 import Navigation from "@/components/common/navigation/Navigation";
 export default {
   data() {
-    return {};
+    return {
+    };
   },
 
   components: {
     Navigation,
-    Button
+    MessageBox
   },
 
   methods: {
-    butClick(){
-      console.log('点击了');
-      
-    }
   }
 };
 </script>

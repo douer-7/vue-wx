@@ -1,6 +1,5 @@
 <template>
-  <div class="nav-bar" 
-  :style="{backgroundColor:backgroundColor,height:height}">
+  <div class="nav-bar" :style="{height:height}">
     <div v-if="back" class="nav-back" @click="historyBack()">返回</div>
     <p class="nav-title" :style="{color:color}">{{title}}</p>
     <div class="nav-right">
@@ -15,8 +14,7 @@ export default {
     title: String,
     back: Boolean,
     height: String,
-    color: String,
-    backgroundColor: String
+    color: String
   },
   data() {
     return {};
@@ -27,6 +25,7 @@ export default {
   methods: {
     historyBack() {
       console.log("返回点击");
+      this.$router.back(-1)
     }
   }
 };
@@ -37,7 +36,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background: #f7f7f7;
+  border-bottom: 1px solid #ddd;
+  position: relative;
 }
 .nav-title {
   margin: 0 auto;
@@ -45,10 +45,10 @@ export default {
 }
 .nav-back {
   position: absolute;
-  left: 5px;
+  left: 15px;
 }
 .nav-right {
   position: absolute;
-  right: 5px;
+  right: 15px;
 }
 </style>

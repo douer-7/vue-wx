@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <router-view></router-view>
-    <main-tab-bar></main-tab-bar>
+    <transition>
+      <router-view class="view"></router-view>
+    </transition>
+    <main-tab-bar v-if="$route.meta.keepAlive"></main-tab-bar>
   </div>
 </template>
 
@@ -21,6 +23,5 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
 }
 </style>

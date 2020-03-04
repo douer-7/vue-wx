@@ -38,3 +38,16 @@
     --weui-TAG-TEXT-BLACK: rgba(0, 0, 0, .5);
     --weui-TAG-BACKGROUND-BLACK: rgba(0, 0, 0, .05);
 }
+
+body {
+    background-color: var(--weui-BG-0);
+}
+
+.nav-bar {
+    background-color: #ddddddbd;
+    border-bottom: 1px solid var(--weui-FG-3);
+}
+
+.wxMessagePanel {
+    background-color: var(--weui-BG-2);
+}

@@ -1,16 +1,31 @@
 @import "./normalize.css";
+@import "./wx.css";
 
 :root {
     /* 定义变量 */
     --color-text: #666;
     --color-high-text: #ff5777;
     --color-theme: #5da6eb;
-    /* wx */
+
+    height: 100%;
 
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--weui-BG-0);
+    height: 100%;
+}
+
+/* 尺寸设置 */
+
+#app {
+    height: calc(100% - 60px);
+}
+.view-home{
+    height: 100%;
+}
+.message-box {
+    height: calc(100% - 50px);
+    overflow-y: scroll;
 }

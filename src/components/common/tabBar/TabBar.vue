@@ -42,5 +42,7 @@ export default {
   position: absolute;
   bottom: 0;
   width: 100%;
+  height: 59px;
+  text-align: center
 }
 </style>
