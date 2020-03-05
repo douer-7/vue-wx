@@ -1,14 +1,13 @@
 <template>
   <div id="app">
-    <transition>
-      <router-view class="view"></router-view>
-    </transition>
+    <router-view class="view"></router-view>
     <main-tab-bar v-if="$route.meta.keepAlive"></main-tab-bar>
   </div>
 </template>
 
 <script>
 import MainTabBar from "@/components/content/MainTabBar";
+
 export default {
   name: "App",
   components: {

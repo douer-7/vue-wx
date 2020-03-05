@@ -44,8 +44,7 @@ body {
 }
 
 .nav-bar {
-    background-color: #ddddddbd;
-    border-bottom: 1px solid var(--weui-FG-3);
+    background-color: var(--weui-BG-0);
 }
 
 .wxMessagePanel {

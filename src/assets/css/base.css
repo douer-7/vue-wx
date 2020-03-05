@@ -22,9 +22,11 @@ body {
 #app {
     height: calc(100% - 60px);
 }
-.view-home{
+
+.view-home {
     height: 100%;
 }
+
 .message-box {
     height: calc(100% - 50px);
     overflow-y: scroll;

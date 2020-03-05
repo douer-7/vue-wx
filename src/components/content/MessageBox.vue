@@ -6,33 +6,12 @@
 
 <script>
 import MessagePanel from "@/components/content/MessagePanel";
+import { request } from "@/network/request";
 
 export default {
   data() {
     return {
-      messageList: [
-        {
-          wxid: "ccxxss",
-          avatarSrc: require("../../assets/img/avatar.png"),
-          nickname: "张三",
-          message: "我来了来了",
-          time: "2020-2-11-09:54"
-        },
-        {
-          wxid: "ccc",
-          avatarSrc: require("../../assets/img/avatar.png"),
-          nickname: "NHHUI",
-          message: "haosjfc",
-          time: "2020-2-11-09:54"
-        },
-        {
-          wxid: "sss",
-          avatarSrc: require("../../assets/img/avatar.png"),
-          nickname: "isi",
-          message: "v阿凡达十八岁的吧",
-          time: "2020-2-11-09:54"
-        },
-      ]
+      messageList: []
     };
   },
 
@@ -40,7 +19,19 @@ export default {
     MessagePanel
   },
 
-  methods: {}
+  methods: {
+    getMessageList() {
+      request({
+        url: "/messageList"
+      }).then(res => {
+        this.messageList = res.data.list;
+        this.$store.commit("updateLoading", false);
+      });
+    }
+  },
+  created() {
+    this.getMessageList();
+  }
 };
 </script>
 

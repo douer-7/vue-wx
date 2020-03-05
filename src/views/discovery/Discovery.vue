@@ -20,15 +20,15 @@ export default {
       navList: [
         {
           navName: "朋友圈",
-          navIconSrc: require("../../assets/img/avatar.png")
+          navIconSrc: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
         },
         {
           navName: "游戏",
-          navIconSrc: require("../../assets/img/avatar.png")
+          navIconSrc: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
         },
         {
           navName: "购物",
-          navIconSrc: require("../../assets/img/avatar.png")
+          navIconSrc: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
         }
       ]
     };
