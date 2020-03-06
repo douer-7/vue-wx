@@ -61,8 +61,8 @@ const routes = [{
 
 const router = new VueRouter({
     routes,
-    mode: 'history',
-    base: '/vue-wx/'
+    // mode: 'history',
+    // base: '/vue-wx/'  
 })
 
 //导出
