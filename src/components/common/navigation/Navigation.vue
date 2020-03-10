@@ -1,6 +1,6 @@
 <template>
   <div class="nav-bar" :style="{height:height}">
-    <div v-if="back" class="nav-back" @click="historyBack()">返回</div>
+    <Icon v-if="back" class="nav-back" @click.native="historyBack()" type="back" />
     <p class="nav-title" :style="{color:color}">{{title}}</p>
     <div class="nav-right">
       <slot name="nav-right"></slot>
@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import Icon from "@/components/common/icon/Icon";
+
 export default {
   props: {
     title: String,
@@ -20,12 +22,13 @@ export default {
     return {};
   },
 
-  components: {},
+  components: {
+    Icon
+  },
 
   methods: {
     historyBack() {
-      console.log("返回点击");
-      this.$router.back(-1)
+      this.$router.back(-1);
     }
   }
 };
@@ -38,10 +41,10 @@ export default {
   justify-content: space-around;
   border-bottom: 1px solid #ddd;
   position: relative;
+  font-size: 18px;
 }
 .nav-title {
   margin: 0 auto;
-  font-size: 18px;
 }
 .nav-back {
   position: absolute;

@@ -1,8 +1,6 @@
 <template>
   <div>
-    <Navigation title="支付" height="49px" back>
-      <div slot="nav-right">▪▪▪</div>
-    </Navigation>
+    <Navigation title="设置" height="49px" back></Navigation>
   </div>
 </template>
 

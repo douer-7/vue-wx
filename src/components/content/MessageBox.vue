@@ -1,5 +1,5 @@
 <template>
-  <div class="message-box">
+  <div class="scroolBox-TB">
     <MessagePanel v-for="item in messageList" :key="item.wxid" :messageInfo="item"></MessagePanel>
   </div>
 </template>

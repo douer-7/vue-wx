@@ -1,7 +1,9 @@
 <template>
-  <div class="view-home">
+  <div class="view-B">
     <Navigation :title="$store.state.isLoading?'收取中...':'微信'" height="49px">
-      <div slot="nav-right">◉</div>
+      <div slot="nav-right">
+        <Icon type="add" />
+      </div>
     </Navigation>
     <MessageBox></MessageBox>
   </div>
@@ -10,6 +12,8 @@
 <script>
 import MessageBox from "@/components/content/MessageBox";
 import Navigation from "@/components/common/navigation/Navigation";
+import Icon from "@/components/common/icon/Icon";
+
 export default {
   data() {
     return {};
@@ -17,7 +21,8 @@ export default {
 
   components: {
     Navigation,
-    MessageBox
+    MessageBox,
+    Icon
   },
 
   methods: {}

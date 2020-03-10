@@ -1,30 +1,38 @@
 <template>
-  <Button class="nav-block-but" block>
+  <Button class="nav-block-but" block @click.native="navOnClick()">
     <slot>
       <img :src="navIconSrc" class="nav-icon" />
       <p class="nav-name">{{navName}}</p>
     </slot>
-    <span class="icon icon-go">＞</span>
+    <Icon v-if="goIcon" class="icon-go" type="go" />
   </Button>
 </template>
 
 <script>
 import Button from "@/components/common/button/Button";
+import Icon from "@/components/common/icon/Icon";
 
 export default {
   props: {
     navIconSrc: String,
-    navName: String
+    navName: String,
+    path: String,
+    goIcon: Boolean
   },
   data() {
     return {};
   },
 
   components: {
-    Button
+    Button,
+    Icon
   },
 
-  methods: {}
+  methods: {
+    navOnClick() {
+      this.$router.push(this.path);
+    }
+  }
 };
 </script>
 

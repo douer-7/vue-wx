@@ -20,14 +20,22 @@ body {
 /* 尺寸设置 */
 
 #app {
-    height: calc(100% - 60px);
-}
-
-.view-home {
     height: 100%;
 }
 
-.message-box {
-    height: calc(100% - 50px);
+.view {
+    height: 100%;
+}
+
+.view-B {
+    height: calc(100% - 60px);
+}
+
+.scroolBox {
     overflow-y: scroll;
+}
+
+.scroolBox-TB {
+    overflow-y: scroll;
+    height: calc(100% - 50px);
 }

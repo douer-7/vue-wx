@@ -1,12 +1,15 @@
 <template>
-  <div>
+  <div class="view-B">
     <Navigation title="发现" height="49px"></Navigation>
-    <WxNavBut
-      v-for="item in navList"
-      :key="item.navName"
-      :navName="item.navName"
-      :navIconSrc="item.navIconSrc"
-    ></WxNavBut>
+    <div class="scroolBox-TB">
+      <WxNavBut
+        v-for="item in navList"
+        :key="item.navName"
+        :navName="item.navName"
+        :navIconSrc="item.navIconSrc"
+        goIcon
+      ></WxNavBut>
+    </div>
   </div>
 </template>
 
@@ -20,16 +23,19 @@ export default {
       navList: [
         {
           navName: "朋友圈",
-          navIconSrc: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
+          navIconSrc:
+            "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
         },
         {
           navName: "游戏",
-          navIconSrc: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
+          navIconSrc:
+            "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
         },
         {
           navName: "购物",
-          navIconSrc: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
-        }
+          navIconSrc:
+            "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+        },
       ]
     };
   },
