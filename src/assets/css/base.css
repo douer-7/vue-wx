@@ -31,8 +31,10 @@ body {
     height: calc(100% - 60px);
 }
 
-.scroolBox {
+.scroolBox-T {
     overflow-y: scroll;
+    height: calc(100% - 50px);
+
 }
 
 .scroolBox-TB {

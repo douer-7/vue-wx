@@ -1,10 +1,17 @@
 <template>
-  <Button class="nav-block-but" block @click.native="navOnClick()">
+  <Button
+    class="nav-block-but"
+    :style="center?{justifyContent:'center'}:{}"
+    block
+    @click.native="navOnClick()"
+  >
     <slot>
-      <img :src="navIconSrc" class="nav-icon" />
+      <img v-if="navIconSrc" :src="navIconSrc" class="nav-icon" />
       <p class="nav-name">{{navName}}</p>
     </slot>
-    <Icon v-if="goIcon" class="icon-go" type="go" />
+    <slot name="rightIcon">
+      <Icon v-if="goIcon" class="icon-go" type="go" />
+    </slot>
   </Button>
 </template>
 
@@ -17,7 +24,8 @@ export default {
     navIconSrc: String,
     navName: String,
     path: String,
-    goIcon: Boolean
+    goIcon: Boolean,
+    center: Boolean
   },
   data() {
     return {};
@@ -64,5 +72,6 @@ export default {
 .icon-go {
   position: absolute;
   right: 24px;
+  color: #b4b4b4;
 }
 </style>

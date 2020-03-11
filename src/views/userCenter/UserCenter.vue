@@ -1,5 +1,5 @@
 <template>
-  <div class="view-B scroolBox">
+  <div class="view-B scroolBox-T">
     <WxNavBut class="user-card-but" v-show="!$store.state.isLoading" goIcon>
       <img class="user-avatar" :src="userInfo.avatarSrc" />
       <div>

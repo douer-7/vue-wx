@@ -32,7 +32,6 @@ export default {
 
   methods: {
       enterChat(){
-          console.log('点击了'+this.messageInfo.wxid);
           this.$router.push('/chat/'+this.messageInfo.wxid);
       }
   }

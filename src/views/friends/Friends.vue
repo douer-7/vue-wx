@@ -1,6 +1,6 @@
 <template>
   <div class="view-B">
-    <Navigation title="通讯录" height="49px">
+    <Navigation :title="$store.state.isLoading?'收取中...':'通讯录'" height="49px">
       <div slot="nav-right">
         <Icon type="add-account" />
       </div>

@@ -41,5 +41,6 @@ export default {
   vertical-align: middle;
   fill: currentColor;
   overflow: hidden;
+
 }
 </style>
