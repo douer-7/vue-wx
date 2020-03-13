@@ -1,4 +1,6 @@
-# vue-test
+# vue-wx
+
+## [Preview](http://douer7.gitee.io/vue-wx)
 
 ## Project setup
 ```
