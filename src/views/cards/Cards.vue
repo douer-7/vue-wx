@@ -1,7 +1,9 @@
 <template>
   <div>
     <Navigation :title="$store.state.isLoading?'收取中...':'卡包'" height="49px" back>
-      <div slot="nav-right">▪▪▪</div>
+      <div slot="nav-right">
+        <Icon type="ellipsis" />
+      </div>
     </Navigation>
     <div class="scroolBox-T">
       <div class="butGroup">
@@ -46,6 +48,8 @@
 import Navigation from "@/components/common/navigation/Navigation";
 import WxNavBut from "@/components/content/WxNavBut";
 import Card from "@/components/content/Card";
+import Icon from "@/components/common/icon/Icon";
+
 import { request } from "@/network/request";
 
 export default {
@@ -58,7 +62,8 @@ export default {
   components: {
     Navigation,
     WxNavBut,
-    Card
+    Card,
+    Icon
   },
 
   methods: {

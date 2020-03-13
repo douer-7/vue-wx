@@ -23,10 +23,20 @@ export default {
           return require("./svg/add-account.svg");
         case "back":
           return require("./svg/arrow-lift.svg");
-        case "moments":
-          return require("./svg/moments.svg");
         case "go":
           return require("./svg/arrow-right.svg");
+        case "collection":
+          return require("./svg/collection.svg");
+        case "ellipsis":
+          return require("./svg/ellipsis.svg");
+        case "moments":
+          return require("./svg/moments.svg");
+        case "pay":
+          return require("./svg/pay.svg");
+        case "search":
+          return require("./svg/search.svg");
+        case "wallet":
+          return require("./svg/wallet.svg");
       }
       return null;
     }
@@ -41,6 +51,5 @@ export default {
   vertical-align: middle;
   fill: currentColor;
   overflow: hidden;
-
 }
 </style>
